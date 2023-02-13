@@ -24,7 +24,7 @@ DigitalIn bt (PC_13);
 int s0_value;
 int s1_value;
 
-//Serial pc(USBTX, USBRX); // tx, rx
+float pwm = 0.2;
 
 int main()
 {
@@ -37,7 +37,7 @@ int main()
     MA2.period(0.020);
     MB1.period(0.020);
     MB2.period(0.020);
-    float pwm = 0.2;
+    
 
     while (true) {
         s0_value = S0.read()*1000;
